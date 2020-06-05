@@ -1,0 +1,142 @@
+#footer {
+    background-color: #130325;
+    padding: 38px 0px 53px 41px;
+}
+
+.link-footer{
+    display: flex;
+}
+
+.combo-link {
+    padding: 0px 41px 0px 0px;
+    width: 150px;
+}
+
+.link-footer p:nth-child(1){
+    font-size: 9px;
+    color: #0D4363
+}
+
+.link-footer p:nth-child(2){
+    font-size: 9px;
+    line-height: 15px;
+
+    margin-top: 20px;
+}
+
+#bottom{
+    padding: 61px 41px 0px 0px;
+    font-size: 6px;
+    color: #5C5B61;
+}
+
+.marker {
+    background-image: url('../img/mapbox-icon.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .mapboxgl-popup {
+    max-width: 200px;
+  }
+  
+  .mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .pop-up {
+      width: 150px;
+  }
+
+  .pop-up img{
+      height: 50px;
+  }
+
+  .pop-up p {
+      font-size: 16px;
+      color: #000;
+  }
+
+  .pop-up p strong {
+      font-weight: bold;
+  }
+
+  .mapboxgl-popup-close-button  {
+      font-size: 30px;
+  }
+
+  .wrapper-map {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+
+    padding: 10px;
+  }
+  
+  .mapp{
+    width: 100%; 
+    height: 200px;
+
+    margin-left: -20px;
+  }
+
+
+@media only screen and (min-width: 550px){
+}
+@media only screen and (min-width: 768px){
+    .wrapper-map {
+        flex-direction: row;
+    }
+}
+@media only screen and (min-width: 1024px){
+    
+}
+@media only screen and (min-width: 1128px){
+    
+
+    .pop-up {
+        width: 200px;
+    }
+}
+@media only screen and (min-width: 1920px){
+    #footer {
+        padding: 76.6px 167px 111px 210px;
+        font-size: 11px;
+    }
+
+    .link-footer p:nth-child(1){
+        font-size: 11px;
+        color: #0D4363
+    }
+    
+    .link-footer p:nth-child(2){
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    #about {
+        width: 280px;
+    }
+
+    #history {
+        width: 120px;
+    }
+
+    #contact {
+        width: 280px;
+    }
+
+    #bottom{
+        font-size: 12px;
+    }
+
+    .mapp{
+        width: 400px; 
+        height: 300px;
+      }
+}

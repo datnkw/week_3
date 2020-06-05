@@ -1,0 +1,146 @@
+#banner {
+    /* background-image: url('../img/bg_reposition.jpeg'); */
+
+    /* background-repeat: no-repeat;
+    background-position: 10px 10px; */
+
+    width: 100%;
+    height: 380px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    touch-action: none;
+    /* background-size: 600px; */
+}
+
+#background-banner{
+    background-image: url('../img/bg_reposition.jpeg');
+
+    width: 120%;
+    height: 120%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+
+    left: 0px;
+    top: 0px;
+}
+
+#TriggerDraggable {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    /* background-color: #15032a;
+    color: #fff;
+
+    border: 0px;
+
+    padding: 5px; */
+
+    cursor: pointer;
+}
+
+#confirmPosition {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+.btn-banner {
+    background-color: #15032a;
+    color: #fff;
+    padding: 5px;
+    border: 0px;
+
+    cursor: pointer;
+}
+
+.btn-banner:focus{
+    outline: none;
+}
+
+#slider-size {
+    position: absolute;
+
+    top: 100px;
+    left: 10px;
+
+    height: 200px;
+    width: 20px;
+
+    background-color: #fff;
+
+    z-index: 2;
+
+    border-radius: 10px;
+}
+
+#slider-size div {
+    border-radius: 50%;
+    border: 1px solid;
+
+    position: absolute;
+    bottom: 0px;
+
+    height: 20px;
+    width: 20px;
+
+    background-color: #15032A;
+
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 550px){
+}
+@media only screen and (min-width: 768px){
+    #banner {
+        /* background-position: -200px 0px; */
+        /* background-size: 1200px; */
+        /* background-size: 100%; */
+        height: 360px;
+    }
+
+    /* #background-banner {
+        background-size: 1200px;
+        height: 360px;
+    } */
+}
+@media only screen and (min-width: 1024px){
+    #confirmPosition {
+        right: 100px;
+    }
+}
+@media only screen and (min-width: 1128px){
+    #banner {
+        /* background-position: -200px -50px; */
+
+        background-size: 1600px;
+        height: 480px;
+    }
+/* 
+    #background-banner{
+        background-size: 1600px;
+        height: 480px;
+    } */
+}
+@media only screen and (min-width: 1920px){
+    #banner {
+        /* background-position: 0px 0px; */
+        width: 100%;
+        height: 580px;
+        background-size: 100%;
+    }
+
+    /* #background-banner {
+        width: 100%;
+        height: 580px;
+        background-size: 100%;
+    } */
+}

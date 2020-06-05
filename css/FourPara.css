@@ -1,0 +1,68 @@
+#FourPara {
+    background-color: #130325;
+    padding: 20px 37px 0px 37px;
+    font-size: 6.5px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-para{
+    display: flex;
+    padding: 0px 0px 40px 0px;
+}
+
+.para {
+    margin-right: 20px;
+}
+
+.para p {
+    line-height: 12.5px;
+}
+
+.para p:nth-child(1){
+    font-size: 12px;
+    padding: 0px 9px 15px 0px;
+}
+
+.para p:nth-child(2){
+
+}
+
+@media only screen and (min-width: 550px){
+}
+@media only screen and (min-width: 768px){
+}
+@media only screen and (min-width: 1024px){
+    #FourPara {
+        flex-direction: row;
+
+        font-size: 13px;
+
+        background-image: url('../img/second/bg.png');
+        background-size: 120%;
+        background-position: center center;
+    }
+    .para p {
+        line-height: 25px;
+    }
+}
+@media only screen and (min-width: 1128px){
+}
+@media only screen and (min-width: 1920px){
+    #FourPara {
+        flex-direction: row;
+        padding: 109px 167px 53px 210px;
+        font-size: 13px;
+
+        
+    }
+
+    .para p {
+        line-height: 25px;
+    }
+
+    .para p:nth-child(1){
+        font-size: 24px;
+    }
+}

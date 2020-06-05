@@ -1,0 +1,12 @@
+#background-colors {
+    background-image: url('../img/second/bg.png');
+    height: fit-content;
+}
+
+#blur-background {
+    background-image: url('../img/second/bg.png');
+
+    /* background-color: red;  */
+    background-size: cover;
+
+}

@@ -1,0 +1,157 @@
+#second {
+    background-color: #15032A;
+    
+}
+
+.slider{
+    height: 603px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+    position: relative;
+
+    padding: 30px 0px;
+    background-image: url();
+    background-color: #15032A;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.wrapper-items {
+    overflow: hidden;
+
+    display: flex;
+
+    
+
+    width: 100%;
+
+    height: 467px;
+
+    position: absolute;
+    bottom: 0px;
+
+    /* background-color: red; */
+}
+
+.item {
+    position: absolute;
+
+    width: 322.71px;
+    min-height: 397.74px;
+
+    margin: 0px 8.5px;
+
+    overflow: hidden;
+
+
+    background-color: #fff;
+
+    transition: all 0.5s ease-in-out;
+
+    /* transition: opacity 1s ease-in-out; */
+}
+
+.item.zero {
+    opacity: 0;
+    left: -323px;
+}
+
+.item.first {
+    left: -323px;
+}
+
+.item.second {
+    left: -323px;
+}
+
+.item.third {
+    left: -301px;
+}
+
+.item.forth {
+    left: 40px;
+    
+}
+
+.item.fifth {
+    opacity: 0;
+    left: 400px;
+    /* transition: opacity 1s ease-in-out; */
+}
+
+.item .bg {
+    max-height: 204px;
+    background-image: url('../img/carousel_1/bg.png');
+    background-position: center center;
+    height: 204px;
+
+    position: relative;
+}
+
+.item .bg img {
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+}
+
+.item .bg img.divider {
+    bottom: -19px;
+    left: -19px;
+}
+
+.content {
+    padding: 37px 40px 0px 40px;
+    color: #000;
+}
+
+.content p:nth-child(1){
+    color: #0C2539;
+    font-size: 25px;
+    padding: 0px 0px 25px 0px;
+}
+
+.content p:nth-child(2){
+    color: #677278;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.content p:nth-child(3){
+    color: #0C2539;
+    font-size: 12px;
+    line-height: 24px;
+
+    position: absolute;
+    left: 58px;
+    bottom: 27px;
+}
+
+.content img {
+    position: absolute;
+    right: 24px;
+    bottom: 27px;
+}
+
+.slider .title {
+    display: none;
+    margin-left: 209px;
+    font-size: 18px;
+}
+
+.navigate {
+    display: none;
+
+    position: absolute !important;
+    right: 0px;
+
+}

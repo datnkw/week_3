@@ -1,0 +1,311 @@
+#second {
+    background-color: #15032A;
+    
+}
+
+.slider{
+    height: 459px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+
+    position: relative;
+
+    padding: 30px 0px;
+    /* background-image: url(); */
+    /* background-color: #15032A; */
+
+
+
+    margin-left: -162px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    /* margin-left: -300px; */
+}
+
+.wrapper-items {
+    overflow: hidden;
+
+    display: flex;
+
+    
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+    bottom: 0px;
+
+    cursor: grab;
+
+    /* background-color: red; */
+}
+
+/* .wrapper-items{
+    cursor: grabbing;
+} */
+
+.item {
+    position: absolute;
+
+    width: 322.71px;
+    min-height: 397.74px;
+
+    overflow: hidden;
+
+
+    background-color: #fff;
+
+    transition: all 0.5s ease-in-out;
+
+    opacity: 0;
+    
+    left: -587px;
+
+    /* transition: opacity 1s ease-in-out; */
+}
+
+/* .item.zero {
+    opacity: 0;
+    left: -323px;
+}
+
+.item.first {
+    left: -323px;
+}
+
+.item.second {
+    left: -323px;
+}
+
+.item.third {
+    left: -301px;
+}
+
+.item.forth {
+    left: 40px;
+    
+}
+
+.item.fifth {
+    opacity: 0;
+    left: 400px;
+} */
+
+.item.zero {
+    opacity: 0;
+    left: -587px;
+}
+
+.item.first {
+    opacity: 1;
+    left: -189px;
+    /* left: -296px; */
+}
+
+.item.second {
+    opacity: 1;
+    left: 209px;
+    /* left: 132px; */
+}
+
+.item.third {
+    /* left: 551px; */
+    opacity: 1;
+    left: 608px;
+}
+
+.item.forth {
+    opacity: 1;
+    /* left: 850px; */
+    left: 1007px;
+}
+
+.item.fifth {
+    opacity: 0;
+    left: 1800px;
+}
+
+.item .bg {
+    max-height: 204px;
+    background-image: url('../img/carousel_1/bg.png');
+    background-position: center center;
+    height: 204px;
+
+    position: relative;
+}
+
+.item .bg.top-center {
+    background-position: center center;
+    background-size: 411px 275px;
+}
+
+.item .bg.center-center {
+    background-position: center center;
+}
+
+.item .bg.bottom-center {
+    background-position: bottom center;
+}
+
+.item .bg.top-left{
+    background-position: center right;
+}
+
+.item .bg img {
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+}
+
+.item .bg img.divider {
+    bottom: -19px;
+    left: -19px;
+}
+
+.content {
+    padding: 32px 33px 0px 34px;
+    color: #000;
+}
+
+.content p:nth-child(1){
+    color: #0C2539;
+    font-size: 25px;
+    padding: 0px 0px 15px 0px;
+}
+
+.content p:nth-child(2){
+    color: #677278;
+    font-size: 11px;
+    line-height: 20px;
+}
+
+.content p:nth-child(3){
+    color: #0C2539;
+    font-size: 10px;
+
+    position: absolute;
+    left: 49px;
+    bottom: 23px;
+}
+
+.content img {
+    position: absolute;
+    right: 20px;
+    bottom: 23px;
+
+    cursor: pointer;
+}
+
+.slider .title {
+    display: none;
+    margin-left: 209px;
+    font-size: 18px;
+}
+
+.navigate {
+    display: none;
+
+    cursor: pointer;
+
+    position: absolute !important;
+    right: 0px;
+
+}
+
+@media only screen and (min-width: 550px) {
+    .slider{
+        margin-left: -40px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .slider{
+        margin-left: -550px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .slider{
+        margin-left: -500px;
+    }
+}
+
+@media only screen and (min-width: 1128px) {
+    .slider{
+        margin-left: -150px;
+    }
+
+    .navigate {
+        display: initial;
+    }
+
+    .wrapper {
+        width: 1415px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .slider{
+        height: 603px;
+
+        margin-left: 0px;
+    }
+    
+    .wrapper {
+        width: 1515px;
+    }
+    
+    .wrapper-items {
+        width: 1450px;
+        height: 467px;
+    }
+    
+    .item {
+        width: 379px;
+        min-height: 467px;
+        margin: 0px 20px;
+    }
+    
+    .content {
+        padding: 37px 40px 0px 40px;
+    }
+    
+    .content p:nth-child(1){
+        padding: 0px 0px 25px 0px;
+    }
+    
+    .content p:nth-child(2){
+        font-size: 13px;
+        line-height: 24px;
+    }
+    
+    .content p:nth-child(3){
+        font-size: 12px;
+        line-height: 24px;
+        left: 58px;
+        bottom: 27px;
+    }
+    
+    .content img {
+        right: 24px;
+        bottom: 27px;
+    }
+    
+    .slider .title {
+        display: initial;
+    }
+    
+    
+}
+
