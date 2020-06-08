@@ -52,6 +52,7 @@ class Carousel {
             else if (tmp == 5)
                 this.arr[i].className += " fifth"
         } else if (len == 3) {
+            console.log("len 3")
             const tmp = i
             if (tmp == 0)
                 this.arr[i].className += " second"
@@ -171,7 +172,9 @@ class Carousel {
     }
 
     setUpCa(){
+        this.index = 0;
         this.carouselContainer.innerHTML = "";
+        console.log("carousel clear: " + this.carouselContainer.innerHTML)
         this.arrayItems = [...this.firstArrItems]
         for(let k = 0; k < this.arrayItems.length; k++){
             this.carouselContainer.appendChild(this.arrayItems[k])

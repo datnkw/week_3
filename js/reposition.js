@@ -103,6 +103,12 @@ class RepositionBanner {
         //get bottom coordinate of bottom of slider
         let bottomSlider = this.slider.getBoundingClientRect().bottom + window.pageYOffset;
 
+        window.addEventListener('resize', () => {
+            bottomSlider = this.slider.getBoundingClientRect().bottom + window.pageYOffset;
+            console.log("window width: ", window.innerWidth)
+            console.log("bottomSlider: ", bottomSlider)
+        })
+
         console.log("local firstwidth: ", localStorage.getItem("firstWidth"))
 
         let firstWidth = localStorage.getItem("firstWidth")||parseInt(window.getComputedStyle(this.Background, null).width)
@@ -184,13 +190,19 @@ class RepositionBanner {
         })
 
         this.Banner.addEventListener("pointermove", function (event) {
+            console.log("isSliderClick: ", isSliderClick)
             if (isSliderClick) {
                 this.Banner.style.cursor = "pointer"
 
                 MovePosition.setPosition(event)
 
                 //bottom of slider button
+
                 bottomValue = -1 * (MovePosition.y - bottomSlider)
+                console.log("MovePosition y: ", MovePosition.y)
+                console.log("bottomSlider: ", bottomSlider)
+                console.log("bottomvalue: ", bottomValue)
+
 
                 if (bottomValue > 180)
                     bottomValue = 180
@@ -202,15 +214,15 @@ class RepositionBanner {
                 scale = bottomValue / 100 + 1;
                 console.log("scale: ", scale)
 
-                console.log("width scale: ", firstWidth*scale)
-                console.log("height scale: ", firstHeight*scale)
+                // console.log("width scale: ", firstWidth*scale)
+                // console.log("height scale: ", firstHeight*scale)
 
                 this.Background.style.width = (firstWidth*scale) + "px";
                 this.Background.style.height = (firstHeight*scale) + "px";
 
                 console.log("bottomValue: ", bottomValue)
 
-
+                event.stopPropagation();
             }
         }.bind(this), true)
 
@@ -243,61 +255,61 @@ class RepositionBanner {
             event.stopPropagation();
         })
 
-        this.Banner.addEventListener("touchstart", (event) => {
-            if (this.isDraggable) {
-                isMouseDown = true
-                console.log("isMouseDown when click: ", isMouseDown)
-                beginX = event.pageX;
-                beginY = event.pageY;
-            }
-        })
+        // this.Banner.addEventListener("touchstart", (event) => {
+        //     if (this.isDraggable) {
+        //         isMouseDown = true
+        //         console.log("isMouseDown when click: ", isMouseDown)
+        //         beginX = event.pageX;
+        //         beginY = event.pageY;
+        //     }
+        // })
 
-        this.Banner.addEventListener("touchend", (event) => {
-            if (isSliderClick) {
-                console.log("mouse up")
-                isSliderClick = false;
+        // this.Banner.addEventListener("touchend", (event) => {
+        //     if (isSliderClick) {
+        //         console.log("touched up")
+        //         isSliderClick = false;
                
-            }
-            if (this.isDraggable) {
-                isMouseDown = false;
-            }
+        //     }
+        //     if (this.isDraggable) {
+        //         isMouseDown = false;
+        //     }
 
-            this.Banner.style.cursor = "move"
+        //     this.Banner.style.cursor = "move"
             
-        })
+        // })
 
-        this.Banner.addEventListener("pointermove", function (event) {
-            if (isSliderClick) {
-                this.Banner.style.cursor = "pointer"
+        // this.Banner.addEventListener("pointermove", function (event) {
+        //     if (isSliderClick) {
+        //         this.Banner.style.cursor = "pointer"
 
-                MovePosition.x = event.changedTouches[0].screenX;
-                MovePosition.y = event.changedTouches[0].screenY;
+        //         MovePosition.x = event.changedTouches[0].screenX;
+        //         MovePosition.y = event.changedTouches[0].screenY;
 
-                //bottom of slider button
-                bottomValue = -1 * (MovePosition.y - bottomSlider)
+        //         //bottom of slider button
+        //         bottomValue = -1 * (MovePosition.y - bottomSlider)
 
-                if (bottomValue > 180)
-                    bottomValue = 180
-                else if (bottomValue < 0)
-                    bottomValue = 0
+        //         if (bottomValue > 180)
+        //             bottomValue = 180
+        //         else if (bottomValue < 0)
+        //             bottomValue = 0
 
-                this.sliderPointer.style.bottom = bottomValue + "px"
+        //         this.sliderPointer.style.bottom = bottomValue + "px"
 
-                scale = bottomValue / 100 + 1;
-                console.log("scale: ", scale)
+        //         scale = bottomValue / 100 + 1;
+        //         console.log("scale: ", scale)
 
-                console.log("width scale: ", firstWidth*scale)
-                console.log("height scale: ", firstHeight*scale)
+        //         console.log("width scale: ", firstWidth*scale)
+        //         console.log("height scale: ", firstHeight*scale)
 
-                this.Background.style.width = (firstWidth*scale) + "px";
-                this.Background.style.height = (firstHeight*scale) + "px";
+        //         this.Background.style.width = (firstWidth*scale) + "px";
+        //         this.Background.style.height = (firstHeight*scale) + "px";
 
-                console.log("bottomValue: ", bottomValue)
+        //         console.log("bottomValue: ", bottomValue)
 
 
-            }
+        //     }
     
-        }.bind(this), true)
+        // }.bind(this), true)
 
 
     }
