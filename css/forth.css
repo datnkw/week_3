@@ -1,75 +1,76 @@
 #forth {
-    /* background-color: #130325; */
-    padding: 43.6px 38px 41px 38px;
-    font-size: 9px;
+  /* background-color: #130325; */
+  padding: 43.6px 38px 41px 38px;
+  font-size: 9px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #forth p {
-    line-height: 12.5px;
+  line-height: 12.5px;
 }
 
 #first-para p {
-    padding: 0px 0px 16px 0px;
+  padding: 0px 0px 16px 0px;
 }
 
-#first-para{
-    flex-grow: 1;
+#first-para {
+  flex-grow: 1;
 }
 
 #second-para {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
-#footer-slider-wrapper{
-    display: none;
+#footer-slider-wrapper {
+  display: none;
 }
 
-@media only screen and (min-width: 550px){
+@media only screen and (min-width: 550px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1024px) {
+  #forth {
+    flex-direction: row;
+    font-size: 13px;
+  }
+
+  #forth p {
+    line-height: 25px;
+  }
+
+  #first-para p {
+    padding-right: 20px;
+  }
+
+  #footer-slider-wrapper {
+    display: initial;
+  }
 }
-@media only screen and (min-width: 768px){
-}
-@media only screen and (min-width: 1024px){
-    #forth {
-        flex-direction: row;
-        font-size: 13px;
-    }
 
-    #forth p {
-        line-height: 25px;
-    }
+@media only screen and (min-width: 1128px) {}
 
-    #first-para p {
-        padding-right: 20px;
-    }
+@media only screen and (min-width: 1920px) {
+  #forth {
+    flex-direction: row;
+    padding: 84.2px 431px 20px 209px;
 
-    #footer-slider-wrapper{
-        display: initial;
-    }
-}
-@media only screen and (min-width: 1128px){
-}
-@media only screen and (min-width: 1920px){
-    #forth {
-        flex-direction: row;
-        padding: 84.2px 431px 20px 209px;
+    font-size: 13px;
+  }
 
-        font-size: 13px;
-    }
+  #first-para {
+    width: 50%;
+  }
 
-    #first-para{
-        width: 50%;
-    }
+  #forth p {
+    line-height: 25px;
+  }
 
-    #forth p {
-        line-height: 25px;
-    }
+  #forth div {
+    margin: 0px 40px 0px 0px
+  }
 
-    #forth div {
-        margin: 0px 40px 0px 0px
-    }
 
-    
 }
