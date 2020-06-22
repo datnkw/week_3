@@ -49,8 +49,8 @@ class Carousel {
   }
 
   addClass(i) {
-    let len = this.ItemsCarousel.length;
-    let arrClass = this.setArrClass(len)
+    const len = this.ItemsCarousel.length;
+    const arrClass = this.setArrClass(len)
 
     this.arrVisibleItems[i].className += arrClass[i]
   }
@@ -91,8 +91,8 @@ class Carousel {
   }
 
   canDragFalse() {
-    let arrLength = this.ItemsCarousel.length
-    let WindowWidth = window.innerWidth
+    const arrLength = this.ItemsCarousel.length
+    const WindowWidth = window.innerWidth
 
     const WidthMedium = 1024
     const ArrLengthMedium = 2
@@ -106,8 +106,8 @@ class Carousel {
   }
 
   setUpItemFixed() {
-    let arrLength = this.ItemsCarousel.length
-    let arrClass = this.setArrClass(len)
+    const arrLength = this.ItemsCarousel.length
+    const arrClass = this.setArrClass(len)
 
     for (let i = 0; i < arrLength; i++) {
       this.ItemsCarousel[i].className += arrClass[i]
@@ -118,7 +118,7 @@ class Carousel {
     //double the items until the array has the length which is more than 6
     while (this.ItemsCarousel.length < 6) {
       for (let i = 0; i < arrLength; i++) {
-        let child = this.createDivHaveClassItem();
+        const child = this.createDivHaveClassItem();
         child.innerHTML = this.ItemsCarousel[i].innerHTML
         this.ItemsCarousel.push(child)
         this.carouselContainer.appendChild(child)
@@ -158,7 +158,7 @@ class Carousel {
       this.canDrag = true
       // this.controler.style.display = "initial"
       //draggable
-      let arrLength = this.ItemsCarousel.length
+      const arrLength = this.ItemsCarousel.length
       if (arrLength < 6) {
         this.cloneArrayItems(arrLength)
       }
